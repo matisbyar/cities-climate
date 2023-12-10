@@ -1,0 +1,35 @@
+@use "../routes/App.scss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: .8vw;
+
+    margin: 10px;
+
+    .top {
+        display: flex;
+        justify-content: center;
+        gap: 8pt;
+
+        .icon {
+            width: 30px;
+            height: 30px;
+            margin: auto;
+        }
+
+        .stat {
+            align-self: center;
+        }
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .title[content=""] {
+        width: 0;
+        height: 0;
+    }
+    
+}

@@ -1,0 +1,78 @@
+$background: rgba(0, 0, 0, 0.9);
+$color: white;
+$background-hud: rgba(0, 0, 0, 0.223);
+
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: url(../assets/fonts/SF-Pro-Rounded-Regular.otf);
+}
+
+html {
+  font-family: "SF Pro Rounded", sans-serif;
+  margin: 0;
+  background-color: $background;
+  color: $color;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: url("../assets/background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: saturate(80%);
+}
+
+.zonednd {
+  display: flex;
+  width: 600px;
+  height: 200px;
+  background-color: $background-hud;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 10px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
+  animation: border_animation 2s infinite ease-in-out;
+  text-align: center;
+}
+
+.link{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 10px;
+  right: 10px;
+  color: black;
+  text-decoration: none;
+  background-color: white;
+  clip-path: circle();
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: help;
+  z-index: 2;
+}
+
+@keyframes border_animation {
+  0% {
+    border: 2px dashed $background-hud;
+  }
+  50% {
+    border: 2px dashed #ffffff;
+  }
+  100% {
+    border: 2px dashed $background-hud;
+  }
+}
+
+#footer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

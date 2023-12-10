@@ -1,0 +1,24 @@
+@use "../routes/App.scss";
+
+.container {
+  display: flex;
+  position: fixed;
+  background-color: App.$background-hud;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  width: 98%;
+  height: 24%;
+  bottom: 10px;
+  border-radius: 10px;
+}
+
+.cardsContainer{
+    display: flex;
+    width: 100%;
+    gap: 40px;
+    justify-content: center;
+    
+    div{
+        width: 130px;
+    }
+}

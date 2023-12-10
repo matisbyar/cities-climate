@@ -1,0 +1,67 @@
+@use "../routes/App.scss";
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 20px;
+
+  position: fixed;
+  width: 100%;
+  top: 0;
+  margin: 20px;
+
+  .left {
+    display: flex;
+    align-items: center;
+
+    background-color: App.$background-hud;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 10px;
+    padding: 0 20px;
+
+    h1 {
+      margin: 0;
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1vw;
+    padding: 0 20px;
+    border-radius: 10px;
+
+    background-color: App.$background-hud;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+}
+
+
+.date {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1vw;
+  padding: 0 20px;
+  border-radius: 10px;
+
+  background-color: App.$background-hud;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  font-variant-numeric: tabular-nums;
+  font-weight: 400;
+  font-size: 1.3rem;
+
+  .month{
+      color: #BABABA;
+    }
+
+  .year{
+    color: #ffff;
+  }
+}

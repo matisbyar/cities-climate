@@ -1,0 +1,58 @@
+@use "../routes/App.scss";
+
+.container {
+  display: flex;
+  position: relative;
+  height: 80%;
+  width: 8%;
+  margin: 20px;
+  flex-direction: column;
+  border-radius: 10px;
+  transform: translateY(0%);
+  transition: transform 0.5s;
+  cursor: pointer;
+  padding: 5px;
+
+  .category {
+    margin: 5px auto 0 auto;
+    text-align: center;
+  }
+
+  hr {
+    border: 1px solid rgba(255, 255, 255, 0.751);
+    width: 99%;
+  }
+
+  .title {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+    align-self: center;
+    position: absolute;
+    bottom: 10px;
+  }
+
+  &:hover {
+    transform: translateY(-20%);
+  }
+}
+
+.yellow {
+  background-color: #abbd49;
+}
+
+.gray {
+  background-color: #B5BA95;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: #377A70;
+}

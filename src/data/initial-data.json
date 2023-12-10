@@ -1,0 +1,461 @@
+{
+  "globals": {
+    "factors": {
+      "people": 1,
+      "ghg": 1,
+      "health": 1,
+      "energy": 1
+    },
+    "energy": 75,
+    "target": {
+      "health": 95
+    }
+  },
+  "cities": {
+    "usa": {
+      "fullname": "États-Unis d'Amérique",
+      "people": 332000000,
+      "targetPeople": 133000000,
+      "ghg": 4621,
+      "targetGhg": 3195,
+      "health": 50
+    },
+    "jpn": {
+      "fullname": "Japon",
+      "people": 125000000,
+      "targetPeople": 50000000,
+      "ghg": 1007,
+      "targetGhg": 755,
+      "health": 70
+    },
+    "ita": {
+      "fullname": "Italie",
+      "people": 59000000,
+      "targetPeople": 23600000,
+      "ghg": 315,
+      "targetGhg": 236,
+      "health": 90
+    }
+  },
+  "cards": [
+    {
+      "id": "renewableEnergy",
+      "name": "Énergies renouvelables",
+      "description": "Utiliser des sources d'énergie renouvelables comme l'énergie solaire et éolienne pour réduire les émissions de gaz à effet de serre.",
+      "inEffect": 0,
+      "duration": 0,
+      "impacts": {
+        "people": 0.01,
+        "ghg": -0.02,
+        "health": 0.01,
+        "energy": 0.02
+      },
+      "count": 1,
+      "type": "Énergie"
+    },
+    {
+      "id": "sustainablePractices",
+      "name": "Pratiques durables en entreprise",
+      "description": "Adopter des pratiques commerciales durables pour réduire l'empreinte ghge et promouvoir la responsabilité environnementale.",
+      "inEffect": 0,
+      "duration": 0,
+      "impacts": {
+        "people": 0.02,
+        "ghg": -0.05,
+        "health": 0.005,
+        "energy": 0.005
+      },
+      "count": 1,
+      "type": "Business"
+    },
+    {
+      "id": "protectEcosystems",
+      "name": "Protéger les écosystèmes",
+      "description": "Conservation et préservation des écosystèmes naturels pour maintenir la biodiversité et réduire les émissions de CO2.",
+      "inEffect": 0,
+      "duration": 0,
+      "impacts": {
+        "people": 0,
+        "ghg": -0.01,
+        "health": 0.01,
+        "energy": -0.005
+      },
+      "count": 1,
+      "type": "Climat"
+    },
+    {
+      "id": "policySupport",
+      "name": "Soutien politique",
+      "description": "Adoption de politiques gouvernementales favorables aux énergies renouvelables et à la réduction des émissions de gaz à effet de serre.",
+      "inEffect": 0,
+      "duration": 0,
+      "impacts": {
+        "people": 0,
+        "ghg": -0.03,
+        "health": 0.015,
+        "energy": 0.02
+      },
+      "count": 1,
+      "type": "Politique"
+    },
+    {
+      "id": "energyEfficiency",
+      "name": "Efficacité énergétique",
+      "description": "Mettre en œuvre des technologies et des pratiques visant à réduire la consommation d'énergie, contribuant ainsi à la diminution des émissions de gaz à effet de serre.",
+      "inEffect": 0,
+      "duration": 0,
+      "impacts": {
+        "people": 0.12,
+        "ghg": -0.03,
+        "health": 0.01,
+        "energy": 0.03
+      },
+      "count": 1,
+      "type": "Énergie"
+    },
+    {
+      "id": "greenTransportation",
+      "name": "Transport écologique",
+      "description": "Privilégier les modes de transport respectueux de l'environnement, tels que le covoiturage, le vélo ou les transports en commun, pour réduire les émissions de gaz à effet de serre liées aux déplacements.",
+      "inEffect": 0,
+      "duration": 0,
+      "impacts": {
+        "people": 0.03,
+        "ghg": -0.02,
+        "health": 0.02,
+        "energy": 0.02
+      },
+      "count": 1,
+      "type": "Énergie"
+    },
+    {
+      "id": "wasteReduction",
+      "name": "Réduction des déchets",
+      "description": "Adopter des pratiques visant à minimiser la production de déchets, favorisant ainsi la diminution des émissions de gaz à effet de serre liées à la gestion des déchets.",
+      "inEffect": 0.005,
+      "duration": 0,
+      "impacts": {
+        "people": 0,
+        "ghg": -0.02,
+        "health": 0.01,
+        "energy": 0.005
+      },
+      "count": 1,
+      "type": "Climat"
+    },
+    {
+      "id": "carbonOffsetPrograms",
+      "name": "Programmes de compensation carbone",
+      "description": "Participer à des programmes de compensation carbone pour contrebalancer les émissions inévitables en investissant dans des projets durables et respectueux de l'environnement.",
+      "inEffect": 0,
+      "duration": 0,
+      "impacts": {
+        "people": 0,
+        "ghg": -0.04,
+        "health": 0.005,
+        "energy": 0.01
+      },
+      "count": 1,
+      "type": "Business"
+    },{
+      "id": "communityRenewableProjects",
+      "name": "Projets énergétiques communautaires",
+      "description": "Soutenir et participer à des projets énergétiques locaux, favorisant l'engagement communautaire dans la transition vers des sources d'énergie renouvelables.",
+      "inEffect": 0,
+      "duration": 0,
+      "impacts": {
+        "people": 0,
+        "ghg": -0.02,
+        "health": 0.01,
+        "energy": 0.02
+      },
+      "count": 1,
+      "type": "Énergie"
+    },
+    {
+      "id": "greenBuildingDesign",
+      "name": "Conception de bâtiments écologiques",
+      "description": "Adopter des pratiques de conception durable pour les bâtiments afin de réduire la consommation d'énergie et les émissions de gaz à effet de serre.",
+      "inEffect": 0,
+      "duration": 0,
+      "impacts": {
+        "people": 0,
+        "ghg": -0.03,
+        "health": 0.01,
+        "energy": 0.02
+      },
+      "count": 1,
+      "type": "Climat"
+    },
+    {
+      "id": "renewableEnergyEducation",
+      "name": "Éducation aux énergies renouvelables",
+      "description": "Promouvoir l'éducation sur les énergies renouvelables pour sensibiliser et encourager l'adoption de pratiques respectueuses de l'environnement.",
+      "inEffect": 0,
+      "duration": 0,
+      "impacts": {
+        "people": 0,
+        "ghg": -0.01,
+        "health": 0.01,
+        "energy": 0.01
+      },
+      "count": 1,
+      "type": "Politique"
+    },
+    {
+      "id": "sustainableAgriculture",
+      "name": "Agriculture durable",
+      "description": "Promouvoir des pratiques agricoles respectueuses de l'environnement pour réduire les émissions de gaz à effet de serre et encourager la durabilité alimentaire.",
+      "inEffect": 0,
+      "duration": 0,
+      "impacts": {
+        "people": 0,
+        "ghg": -0.02,
+        "health": 0.02,
+        "energy": 0.01
+      },
+      "count": 1,
+      "type": "Business"
+    },
+    {
+      "id": "publicTransportationExpansion",
+      "name": "Expansion des transports en commun",
+      "description": "Soutenir l'expansion des réseaux de transports en commun pour réduire la dépendance aux véhicules individuels et diminuer les émissions de gaz à effet de serre.",
+      "inEffect": 0,
+      "duration": 0,
+      "impacts": {
+        "people": 0,
+        "ghg": -0.03,
+        "health": 0.02,
+        "energy": 0.01
+      },
+      "count": 1,
+      "type": "Politique"
+    },
+    {
+      "id": "renewableEnergyInnovation",
+      "name": "Innovation dans les énergies renouvelables",
+      "description": "Investir dans la recherche et le développement de technologies novatrices pour améliorer l'efficacité des énergies renouvelables.",
+      "inEffect": 0,
+      "duration": 0,
+      "impacts": {
+        "people": 0,
+        "ghg": -0.04,
+        "health": 0.015,
+        "energy": 0.03
+      },
+      "count": 1,
+      "type": "Énergie"
+    },
+    {
+      "id": "greenConsumptionChoices",
+      "name": "Choix de consommation écologiques",
+      "description": "Encourager les choix de consommation respectueux de l'environnement, tels que l'achat de produits durables et locaux, pour réduire l'empreinte carbone individuelle.",
+      "inEffect": 0,
+      "duration": 0,
+      "impacts": {
+        "people": 0,
+        "ghg": -0.02,
+        "health": 0.01,
+        "energy": 0.005
+      },
+      "count": 1,
+      "type": "Business"
+    },
+    {
+      "id": "climateChangeAdaptation",
+      "name": "Adaptation au changement climatique",
+      "description": "Mettre en place des stratégies d'adaptation pour atténuer les effets négatifs du changement climatique sur les communautés vulnérables.",
+      "inEffect": 0,
+      "duration": 0,
+      "impacts": {
+        "people": 0,
+        "ghg": -0.01,
+        "health": 0.02,
+        "energy": 0.01
+      },
+      "count": 1,
+      "type": "Climat"
+    },
+    {
+      "id": "renewableEnergyPartnerships",
+      "name": "Partenariats pour les énergies renouvelables",
+      "description": "Établir des partenariats entre les secteurs public et privé pour accélérer l'adoption des énergies renouvelables à grande échelle.",
+      "inEffect": 0,
+      "duration": 0,
+      "impacts": {
+        "people": 0,
+        "ghg": -0.03,
+        "health": 0.01,
+        "energy": 0.02
+      },
+      "count": 1,
+      "type": "Politique"
+    },
+    {
+      "id": "oceanConservation",
+      "name": "Conservation des océans",
+      "description": "Soutenir des initiatives de conservation des océans pour préserver la biodiversité marine et réduire l'acidification des océans due aux émissions de CO2.",
+      "inEffect": 0,
+      "duration": 0,
+      "impacts": {
+        "people": 0,
+        "ghg": -0.02,
+        "health": 0.01,
+        "energy": -0.005
+      },
+      "count": 1,
+      "type": "Climat"
+    },
+    {
+      "id": "urbanGreenSpaces",
+      "name": "Espaces verts urbains",
+      "description": "Promouvoir la création d'espaces verts en milieu urbain pour améliorer la qualité de l'air, absorber le CO2 et favoriser le bien-être des citoyens.",
+      "inEffect": 0,
+      "duration": 0,
+      "impacts": {
+        "people": 0,
+        "ghg": -0.01,
+        "health": 0.02,
+        "energy": -0.005
+      },
+      "count": 1,
+      "type": "Climat"
+    },
+    {
+      "id": "renewableEnergyCertifications",
+      "name": "Certifications d'énergies renouvelables",
+      "description": "Soutenir et encourager l'obtention de certifications attestant de l'utilisation d'énergies renouvelables, renforçant ainsi la transparence et la crédibilité environnementale.",
+      "inEffect": 0,
+      "duration": 0,
+      "impacts": {
+        "people": 0,
+        "ghg": -0.02,
+        "health": 0.01,
+        "energy": 0.015
+      },
+      "count": 1,
+      "type": "Business"
+    },
+    {
+      "id": "climateChangeAwarenessCampaigns",
+      "name": "Campagnes de sensibilisation au changement climatique",
+      "description": "Lancer des campagnes éducatives pour sensibiliser le public aux impacts du changement climatique et encourager des actions individuelles et collectives.",
+      "inEffect": 0,
+      "duration": 0,
+      "impacts": {
+        "people": 0,
+        "ghg": -0.01,
+        "health": 0.01,
+        "energy": 0.005
+      },
+      "count": 1,
+      "type": "Politique"
+    },
+    {
+      "id": "sustainableTourismPractices",
+      "name": "Pratiques touristiques durables",
+      "description": "Promouvoir des pratiques touristiques respectueuses de l'environnement, minimisant l'impact écologique des voyages et favorisant le tourisme responsable.",
+      "inEffect": 0,
+      "duration": 0,
+      "impacts": {
+        "people": 0,
+        "ghg": -0.02,
+        "health": 0.005,
+        "energy": 0.005
+      },
+      "count": 1,
+      "type": "Business"
+    },
+    {
+      "id": "afforestationInitiatives",
+      "name": "Initiatives d'afforestation",
+      "description": "Mener des projets d'afforestation pour accroître la couverture forestière, absorber le CO2 et restaurer les écosystèmes.",
+      "inEffect": 0,
+      "duration": 0,
+      "impacts": {
+        "people": 0,
+        "ghg": -0.02,
+        "health": 0.01,
+        "energy": -0.005
+      },
+      "count": 1,
+      "type": "Climat"
+    },
+    {
+      "id": "renewableEnergyIncentives",
+      "name": "Incitations aux énergies renouvelables",
+      "description": "Offrir des incitations financières et fiscales pour encourager l'adoption des énergies renouvelables au niveau individuel et commercial.",
+      "inEffect": 0,
+      "duration": 0,
+      "impacts": {
+        "people": 0,
+        "ghg": -0.03,
+        "health": 0.01,
+        "energy": 0.02
+      },
+      "count": 1,
+      "type": "Politique"
+    },
+    {
+      "id": "smartGridImplementation",
+      "name": "Mise en place de réseaux électriques intelligents",
+      "description": "Investir dans des infrastructures de réseaux électriques intelligents pour optimiser la distribution d'énergie et réduire les pertes.",
+      "inEffect": 0,
+      "duration": 0,
+      "impacts": {
+        "people": 0,
+        "ghg": -0.03,
+        "health": 0.01,
+        "energy": 0.02
+      },
+      "count": 1,
+      "type": "Énergie"
+    },
+    {
+      "id": "greenJobCreation",
+      "name": "Création d'emplois verts",
+      "description": "Promouvoir la création d'emplois dans des secteurs respectueux de l'environnement, stimulant ainsi l'économie tout en contribuant à la lutte contre le changement climatique.",
+      "inEffect": 0,
+      "duration": 0,
+      "impacts": {
+        "people": 0,
+        "ghg": -0.01,
+        "health": 0.01,
+        "energy": 0.01
+      },
+      "count": 1,
+      "type": "Business"
+    },
+    {
+      "id": "renewableEnergyStorage",
+      "name": "Stockage d'énergie renouvelable",
+      "description": "Investir dans des solutions de stockage d'énergie renouvelable pour surmonter les fluctuations de production et maximiser l'utilisation des énergies renouvelables.",
+      "inEffect": 0,
+      "duration": 0,
+      "impacts": {
+        "people": 0,
+        "ghg": -0.02,
+        "health": 0.01,
+        "energy": 0.02
+      },
+      "count": 1,
+      "type": "Énergie"
+    },
+    {
+      "id": "climateResilientInfrastructure",
+      "name": "Infrastructure résiliente au climat",
+      "description": "Construire des infrastructures résilientes au climat pour faire face aux impacts attendus du changement climatique, tels que les inondations et les tempêtes.",
+      "inEffect": 0,
+      "duration": 0,
+      "impacts": {
+        "people": 0,
+        "ghg": -0.02,
+        "health": 0.02,
+        "energy": 0.01
+      },
+      "count": 1,
+      "type": "Politique"
+    }
+  ]
+}
